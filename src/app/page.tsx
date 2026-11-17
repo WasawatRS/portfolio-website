@@ -33,8 +33,8 @@ const PROJECTS: Project[] = [
     images: [
       { src: "/images/IV01.png", caption: "ห้องทดลองคำนวณ Expected Move และกรอบความผันผวน ±1 SD / ±2 SD" },
       { src: "/images/IV02.png", caption: "แบบจำลองการกระจายตัวของราคา (Distribution) และเส้นทางราคาสังเคราะห์" },
-      { src: "/images/IV03.png", caption: "คลังอ้างอิงคำศัพท์หลักและแผนที่เส้นทางการเรียนรู้จากเอกสาร 23 ฉบับ" },
-      { src: "/images/IV04.png", caption: "ระบบจัดหมวดหมู่และเข้าถึงเอกสารงานวิจัยต้นฉบับทั้ง 23 ฉบับ" },
+      { src: "/images/IV03.png", caption: "การเปรียบเทียบราคาความผันผวนในอดีตเปรียบเทียบกับอนาคต" },
+      { src: "/images/IV04.png", caption: "คลังอ้างอิงคำศัพท์หลักและแผนที่เส้นทางการเรียนรู้จากเอกสาร 23 ฉบับ" },
     ],
   },
   {
@@ -101,7 +101,7 @@ export default function PortfolioPage() {
             <span className="w-3 h-3 rounded-full bg-orange-500 inline-block"></span>
             <span className="font-bold tracking-tight text-zinc-950">WASAWAT.R</span>
           </div>
-          <nav className="hidden sm:flex items-center gap-6 text-sm font-medium text-zinc-600">
+          <nav className="hidden sm:flex items-center gap-6 text-sm font-medium text-zinc-800">
             <a href="#projects" className="hover:text-orange-500 transition-colors">ผลงาน (Projects)</a>
             <a href="#skills" className="hover:text-orange-500 transition-colors">ทักษะ (Skills)</a>
             <a href="#experience" className="hover:text-orange-500 transition-colors">ประสบการณ์</a>
@@ -132,7 +132,7 @@ export default function PortfolioPage() {
             </p>
           </div>
 
-          <p className="text-zinc-600 max-w-3xl text-base sm:text-lg leading-relaxed">
+          <p className="text-zinc-800 max-w-3xl text-base sm:text-lg leading-relaxed">
             บัณฑิตวิศวกรรมคอมพิวเตอร์ที่มุ่งเน้นการเชื่อมโยง <strong className="text-zinc-900">โจทย์ธุรกิจและข้อมูล</strong> เข้ากับเทคโนโลยี{" "}
             <strong className="text-zinc-900">Generative AI, Automation และ Data Analytics</strong> ถนัดการเก็บความต้องการ (Requirement Analysis) 
             ออกแบบเวิร์กโฟลว์ และพัฒนาต้นแบบโซลูชันที่ใช้งานได้จริงเพื่อแก้ปัญหาหน้างาน
@@ -191,7 +191,7 @@ export default function PortfolioPage() {
 
                     <div>
                       <h3 className="text-xl sm:text-2xl font-bold text-zinc-950">{project.title}</h3>
-                      <p className="text-zinc-600 text-sm sm:text-base mt-1">{project.subtitle}</p>
+                      <p className="text-zinc-800 text-sm sm:text-base mt-1">{project.subtitle}</p>
                     </div>
                   </div>
 
@@ -289,7 +289,7 @@ export default function PortfolioPage() {
                                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                                   currentIdx === i
                                     ? "bg-orange-500 text-white shadow-sm"
-                                    : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
+                                    : "bg-zinc-800 text-zinc-400 hover:bg-zinc-800 hover:text-white"
                                 }`}
                               >
                                 0{i + 1}
@@ -306,15 +306,15 @@ export default function PortfolioPage() {
                     <div className="grid md:grid-cols-3 gap-4">
                       <div className="bg-white p-4 rounded-xl border border-zinc-200 space-y-1.5">
                         <p className="text-xs font-bold uppercase tracking-wider text-zinc-400">01. โจทย์และปัญหา (Problem)</p>
-                        <p className="text-sm text-zinc-700 leading-relaxed">{project.problem}</p>
+                        <p className="text-sm text-zinc-800 leading-relaxed">{project.problem}</p>
                       </div>
                       <div className="bg-white p-4 rounded-xl border border-orange-200 space-y-1.5">
                         <p className="text-xs font-bold uppercase tracking-wider text-orange-600">02. แนวทางแก้ไข (Solution)</p>
-                        <p className="text-sm text-zinc-700 leading-relaxed">{project.solution}</p>
+                        <p className="text-sm text-zinc-800 leading-relaxed">{project.solution}</p>
                       </div>
                       <div className="bg-white p-4 rounded-xl border border-zinc-200 space-y-1.5">
                         <p className="text-xs font-bold uppercase tracking-wider text-zinc-950">03. ผลลัพธ์ที่ได้ (Impact)</p>
-                        <p className="text-sm text-zinc-700 leading-relaxed">{project.impact}</p>
+                        <p className="text-sm text-zinc-800 leading-relaxed">{project.impact}</p>
                       </div>
                     </div>
 
@@ -351,7 +351,7 @@ export default function PortfolioPage() {
                 AI
               </div>
               <h3 className="font-bold text-lg text-zinc-950">AI & Automation</h3>
-              <ul className="text-sm text-zinc-600 space-y-2">
+              <ul className="text-sm text-zinc-800 space-y-2">
                 <li>• Generative AI (Gemini, ChatGPT, Claude)</li>
                 <li>• AI-Assisted Development (Vibe Coding)</li>
                 <li>• Python Workflow Automation & API Integration</li>
@@ -364,7 +364,7 @@ export default function PortfolioPage() {
                 DA
               </div>
               <h3 className="font-bold text-lg text-zinc-950">Data & Business Analysis</h3>
-              <ul className="text-sm text-zinc-600 space-y-2">
+              <ul className="text-sm text-zinc-800 space-y-2">
                 <li>• Requirement Gathering & System Workflow</li>
                 <li>• SQL Query & Relational Database Logic</li>
                 <li>• Data Preparation & Spreadsheets Analytics</li>
@@ -377,7 +377,7 @@ export default function PortfolioPage() {
                 IT
               </div>
               <h3 className="font-bold text-lg text-zinc-950">System & Web Stack</h3>
-              <ul className="text-sm text-zinc-600 space-y-2">
+              <ul className="text-sm text-zinc-800 space-y-2">
                 <li>• Proxmox VE & Docker Container (HomeLab)</li>
                 <li>• On-site Server & Network Infrastructure</li>
                 <li>• Next.js, Angular 19, Tailwind CSS</li>
@@ -401,18 +401,18 @@ export default function PortfolioPage() {
               </span>
               <h3 className="font-bold text-lg text-zinc-950">DMS Isolutions Pte. Ltd.</h3>
               <p className="text-sm font-medium text-zinc-500">Web Development & System Implementation (Intern)</p>
-              <p className="text-sm text-zinc-600 leading-relaxed">
+              <p className="text-sm text-zinc-800 leading-relaxed">
                 วิเคราะห์ความต้องการและออกแบบหน้าเว็บระบบจัดการคลังสินค้า (DMS OneApp) ด้วย Angular 19 รวมถึงร่วมลงพื้นที่ติดตั้งระบบเซิร์ฟเวอร์ Proxmox VE สนับสนุนเครื่องจ่ายยาอัตโนมัติ ณ โรงพยาบาล
               </p>
             </div>
 
             <div className="p-6 rounded-2xl border border-zinc-200 bg-white space-y-3">
-              <span className="text-xs font-bold text-zinc-700 bg-zinc-100 px-2.5 py-1 rounded-md">
+              <span className="text-xs font-bold text-zinc-800 bg-zinc-100 px-2.5 py-1 rounded-md">
                 ฝึกงาน (2 เดือน)
               </span>
               <h3 className="font-bold text-lg text-zinc-950">24 Communication Co., Ltd.</h3>
-              <p className="text-sm font-medium text-zinc-500">Network & Infrastructure (Intern)</p>
-              <p className="text-sm text-zinc-600 leading-relaxed">
+              <p className="text-sm font-medium text-zinc-800">Network & Infrastructure (Intern)</p>
+              <p className="text-sm text-zinc-800 leading-relaxed">
                 สนับสนุนทีมวิศวกรลงพื้นที่ติดตั้งระบบเครือข่าย Switch, Access Point, ระบบกล้องวงจรปิด และตั้งค่าห้อง Server Room ในหน่วยงานภาครัฐและโรงพยาบาล
               </p>
             </div>
@@ -466,7 +466,7 @@ export default function PortfolioPage() {
             <img
               src={lightbox.src}
               alt={lightbox.caption}
-              className="w-full max-h-[82vh] object-contain rounded-xl border border-zinc-700 bg-zinc-950"
+              className="w-full max-h-[82vh] object-contain rounded-xl border border-zinc-800 bg-zinc-950"
             />
           </div>
         </div>
