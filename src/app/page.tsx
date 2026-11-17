@@ -102,12 +102,12 @@ export default function PortfolioPage() {
             <span className="font-bold tracking-tight text-zinc-950">WASAWAT.R</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm font-medium text-zinc-600">
-            <a href="#projects" className="hover:text-orange-600 transition-colors">ผลงาน (Projects)</a>
-            <a href="#skills" className="hover:text-orange-600 transition-colors">ทักษะ (Skills)</a>
-            <a href="#experience" className="hover:text-orange-600 transition-colors">ประสบการณ์</a>
+            <a href="#projects" className="hover:text-orange-500 transition-colors">ผลงาน (Projects)</a>
+            <a href="#skills" className="hover:text-orange-500 transition-colors">ทักษะ (Skills)</a>
+            <a href="#experience" className="hover:text-orange-500 transition-colors">ประสบการณ์</a>
             <a
               href="mailto:wasawatrs@gmail.com"
-              className="bg-zinc-950 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors"
+              className="bg-zinc-950 hover:bg-orange-500 text-white px-4 py-2 rounded-lg transition-colors"
             >
               ติดต่อสัมภาษณ์
             </a>
@@ -127,7 +127,7 @@ export default function PortfolioPage() {
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-950">
               วสวัตติ์ รัตนรังษี
             </h1>
-            <p className="text-xl sm:text-2xl font-semibold text-orange-600">
+            <p className="text-xl sm:text-2xl font-semibold text-orange-500">
               AI & Digital Solutions Advisor | Business Intelligence & System Analyst
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function PortfolioPage() {
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <a
               href="mailto:wasawatrs@gmail.com"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl shadow-sm transition-all"
+              className="bg-orange-500 hover:bg-orange-500 text-white font-semibold px-6 py-3 rounded-xl shadow-sm transition-all"
             >
               ส่งอีเมลติดต่อ (wasawatrs@gmail.com)
             </a>
@@ -155,7 +155,7 @@ export default function PortfolioPage() {
         <section id="projects" className="space-y-10 scroll-mt-24">
           <div className="border-b-2 border-zinc-950 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-orange-600">Portfolio Showcase</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-orange-500">Portfolio Showcase</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950">ผลงานและโซลูชันที่พัฒนาจริง</h2>
             </div>
             <p className="text-sm text-zinc-500">คลิกที่รูปภาพเพื่อขยายดูรายละเอียดขนาดเต็ม</p>
@@ -210,7 +210,7 @@ export default function PortfolioPage() {
                               alt={currentImage.caption}
                               className="w-full h-full object-contain group-hover:scale-[1.01] transition-transform duration-300"
                             />
-                            <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-700 group-hover:bg-orange-600 group-hover:border-orange-500 transition-colors">
+                            <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-700 group-hover:bg-orange-500 group-hover:border-orange-500 transition-colors">
                               คลิกเพื่อขยายภาพเต็มจอ
                             </div>
                           </div>
@@ -270,7 +270,7 @@ export default function PortfolioPage() {
                             alt={currentImage.caption}
                             className="w-full h-full object-contain group-hover:scale-[1.01] transition-transform duration-300"
                           />
-                          <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-700 group-hover:bg-orange-600 group-hover:border-orange-500 transition-colors">
+                          <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-3 py-1.5 rounded-lg border border-zinc-700 group-hover:bg-orange-500 group-hover:border-orange-500 transition-colors">
                             คลิกเพื่อขยายภาพเต็มจอ
                           </div>
                         </div>
@@ -324,7 +324,7 @@ export default function PortfolioPage() {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 bg-zinc-950 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+                          className="inline-flex items-center gap-2 bg-zinc-950 hover:bg-orange-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
                         >
                           เปิดทดลองใช้งานเว็บจริง (Live Demo)
                           <span>↗</span>
@@ -341,7 +341,7 @@ export default function PortfolioPage() {
         {/* 3. Core Skills */}
         <section id="skills" className="space-y-8 scroll-mt-24">
           <div className="border-b-2 border-zinc-950 pb-4">
-            <p className="text-xs font-bold uppercase tracking-wider text-orange-600">Capabilities</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-orange-500">Capabilities</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950">ทักษะและเครื่องมือ (Core Skills)</h2>
           </div>
 
@@ -390,13 +390,13 @@ export default function PortfolioPage() {
         {/* 4. Experience & Education */}
         <section id="experience" className="space-y-8 scroll-mt-24">
           <div className="border-b-2 border-zinc-950 pb-4">
-            <p className="text-xs font-bold uppercase tracking-wider text-orange-600">Background</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-orange-500">Background</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950">ประสบการณ์ฝึกงานและการศึกษา</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-6 rounded-2xl border border-zinc-200 bg-white space-y-3">
-              <span className="text-xs font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md">
+              <span className="text-xs font-bold text-orange-500 bg-orange-50 px-2.5 py-1 rounded-md">
                 สหกิจศึกษา (4 เดือน)
               </span>
               <h3 className="font-bold text-lg text-zinc-950">DMS Isolutions Pte. Ltd.</h3>
@@ -458,7 +458,7 @@ export default function PortfolioPage() {
               <p className="font-medium">{lightbox.caption}</p>
               <button
                 onClick={() => setLightbox(null)}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded-lg text-xs font-bold"
+                className="bg-orange-500 hover:bg-orange-500 text-white px-3 py-1 rounded-lg text-xs font-bold"
               >
                 ปิดหน้าต่าง [X]
               </button>
