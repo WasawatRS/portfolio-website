@@ -125,7 +125,7 @@ const PROJECTS: Project[] = [
   },
 ];
 
-/* คอมโพเนนต์แกลเลอรีแบบปัดซ้าย-ขวา / ลากสไลด์ (ไม่มีปุ่มเปลี่ยนหน้า) */
+/* คอมโพเนนต์แกลเลอรีแบบปัดซ้าย-ขวา / ลากสไลด์ (คำนวณตำแหน่งแม่นยำทุกขนาดหน้าจอ) */
 function SwipeGallery({
   images,
   onOpenLightbox,
@@ -148,12 +148,16 @@ function SwipeGallery({
     const children = Array.from(el.children) as HTMLElement[];
     if (!children.length) return;
 
-    const containerCenter = el.scrollLeft + el.clientWidth / 2;
+    // ใช้ getBoundingClientRect() เพื่อวัดพิกัดจริงบนหน้าจอ ไม่เพี้ยนตามขอบหน้าต่าง
+    const containerRect = el.getBoundingClientRect();
+    const containerCenter = containerRect.left + containerRect.width / 2;
+
     let closestIdx = 0;
     let minDistance = Infinity;
 
     children.forEach((child, idx) => {
-      const childCenter = child.offsetLeft + child.clientWidth / 2;
+      const childRect = child.getBoundingClientRect();
+      const childCenter = childRect.left + childRect.width / 2;
       const dist = Math.abs(containerCenter - childCenter);
       if (dist < minDistance) {
         minDistance = dist;
@@ -171,6 +175,7 @@ function SwipeGallery({
     dragDistance.current = 0;
     startX.current = e.pageX - el.offsetLeft;
     scrollLeftStart.current = el.scrollLeft;
+    el.style.scrollSnapType = "none"; // ปิด snap ชั่วคราวขณะลากเมาส์ให้ลื่นขึ้น
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -185,7 +190,12 @@ function SwipeGallery({
   };
 
   const handleMouseUpOrLeave = () => {
+    if (!isDragging.current) return;
     isDragging.current = false;
+    const el = scrollRef.current;
+    if (el) {
+      el.style.scrollSnapType = "x mandatory"; // คืนค่า snap เมื่อปล่อยเมาส์
+    }
   };
 
   const currentImage = images[activeIndex] || images[0];
@@ -211,13 +221,12 @@ function SwipeGallery({
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUpOrLeave}
         onMouseLeave={handleMouseUpOrLeave}
-        className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth select-none cursor-grab active:cursor-grabbing pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="relative flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory select-none cursor-grab active:cursor-grabbing pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {images.map((img, idx) => (
           <div
             key={img.src}
             onClick={() => {
-              // ถ้าระยะลากเมาส์น้อยกว่า 10px ถือเป็นการคลิกเปิดภาพขยายเต็มจอ
               if (dragDistance.current < 10) {
                 onOpenLightbox(img);
               }
@@ -244,7 +253,7 @@ function SwipeGallery({
         ))}
       </div>
 
-      {/* แถบเส้นบอกตำแหน่งสไลด์ (Indicator Bar แบบแสดงสถานะ ไม่ใช่ปุ่มกด) */}
+      {/* แถบเส้นบอกตำแหน่งสไลด์และคำบรรยายภาพ */}
       <div className="space-y-2 pt-1">
         <div className="flex gap-1.5 w-full">
           {images.map((img, idx) => (
