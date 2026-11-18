@@ -1,29 +1,37 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans, Noto_Sans_Thai } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSans = Noto_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-noto-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const notoSansThai = Noto_Sans_Thai({
+  subsets: ["thai"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-noto-thai",
 });
 
 export const metadata: Metadata = {
-  title: "WASAWAT.R",
-  description: "WASAWAT.R",
+  title: "วสวัตติ์ รัตนรังษี | Portfolio & Projects",
+  description: "รวบรวมผลงานและโปรเจกต์ด้านการพัฒนาระบบ ข้อมูล และ AI โดย วสวัตติ์ รัตนรังษี",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="th" className={`${notoSans.variable} ${notoSansThai.variable} scroll-smooth`}>
+      <body
+        style={{ fontFamily: "var(--font-noto-thai), var(--font-noto-sans), sans-serif" }}
+        className="bg-white text-black antialiased"
+      >
+        {children}
+      </body>
     </html>
   );
 }
