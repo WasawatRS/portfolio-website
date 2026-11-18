@@ -709,7 +709,7 @@ export default function PortfolioPage() {
                     onClick={() => handleCopyText("095-261-0788", "phone")}
                     className="bg-black hover:bg-[#FF7518] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors cursor-pointer"
                   >
-                    {copiedType === "phone" ? "✓ คัดลอกเบอร์โทรแล้ว" : "คัดลอกเบอร์ 095-261-0788"}
+                    {copiedType === "phone" ? "✓ คัดลอกเบอร์โทรแล้ว" : "คัดลอกเบอร์"}
                   </button>
                   <a
                     href="tel:0952610788"
