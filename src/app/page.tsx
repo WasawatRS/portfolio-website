@@ -43,17 +43,17 @@ const PROJECTS: Project[] = [
         orientation: "tall",
       },
       {
-        src: "/images/IV02.jpg",
+        src: "/images/IV02.png",
         caption: "IV02: กราฟรูปทรงโอกาสตามราคา ตารางระดับราคาที่คำนวณได้ และแบบจำลองเส้นทางราคาสังเคราะห์ 600 เส้น",
         orientation: "tall",
       },
       {
-        src: "/images/IV03.jpg",
+        src: "/images/IV03.png",
         caption: "IV03: การวิเคราะห์เส้นความผันผวน IV เทียบกับ RV (พื้นที่ส่วนต่าง VRP รายวัน) และกราฟ Z-score ของ IV",
         orientation: "tall",
       },
       {
-        src: "/images/IV04.jpg",
+        src: "/images/IV04.png",
         caption: "IV04: ระบบคลังการ์ดโน้ตงานวิจัยทั้ง 23 ฉบับ (เครื่องมือ Vol2Vol, Options Data, Gold Gamma Quant) และสารบัญ",
         orientation: "tall",
       },
